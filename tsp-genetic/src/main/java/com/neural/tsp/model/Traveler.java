@@ -1,6 +1,11 @@
 package com.neural.tsp.model;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Traveler {
+
+	private static final Logger LOG = LoggerFactory.getLogger(Traveler.class);
 
 	private int[] path;
 	private double distance;
@@ -21,10 +26,7 @@ public class Traveler {
 	}
 
 	public void logTravelerInfo() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("Iteration: ").append(iteration);
-		sb.append(", Path Length: ").append(distance);
-		System.out.println(sb.toString());
+		LOG.debug("Iteration: {}, Patch Length: {}", iteration, distance);
 	}
 
 }

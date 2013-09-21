@@ -12,6 +12,8 @@ import org.encog.ml.genetic.genome.Genome;
 import org.encog.ml.genetic.mutate.MutateShuffle;
 import org.encog.ml.genetic.population.BasicPopulation;
 import org.encog.ml.genetic.population.Population;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.neural.tsp.model.City;
 import com.neural.tsp.model.Country;
@@ -19,6 +21,8 @@ import com.neural.tsp.model.Traveler;
 import com.neural.tsp.model.TravelerGenome;
 
 public class GeneticTspSolver extends Observable {
+
+	private Logger LOG = LoggerFactory.getLogger(GeneticTspSolver.class);
 
 	private TspProblemProperties problemProperties;
 	private GeneticAlgorithm geneticAlgorithm;
@@ -79,7 +83,7 @@ public class GeneticTspSolver extends Observable {
 
 			lastSolution = traveler.getDistance();
 		}
-		System.out.println("Good solution found:");
+		LOG.debug("Good solution found:");
 		displaySolution();
 	}
 
@@ -93,13 +97,14 @@ public class GeneticTspSolver extends Observable {
 		boolean first = true;
 		Chromosome bestChromosome = geneticAlgorithm.getPopulation().getBest()
 				.getChromosomes().get(0);
+		StringBuffer sb = new StringBuffer();
 		for (Gene gene : bestChromosome.getGenes()) {
-			if (!first)
-				System.out.print(">");
-			System.out.print("" + ((IntegerGene) gene).getValue());
+			if (!first) {
+				sb.append(">");
+			}
+			sb.append(((IntegerGene) gene).getValue());
 			first = false;
 		}
-		System.out.println("");
+		LOG.debug(sb.toString());
 	}
-
 }
