@@ -1,6 +1,8 @@
 tsp-genetic
 ===========
 
-Project solving the Travelling Salesman Problem using Genetic Algorithm with Enoc library.
+Project solving the Travelling Salesman Problem using Genetic Algorithm with the [Encog framework] (http://www.heatonresearch.com/encog).
 
-Please visit the link http://www.youtube.com/watch?v=M0xlOQTjCXs for a live demo
+
+
+Please visit the [live demo] (http://www.youtube.com/watch?v=M0xlOQTjCXs).
