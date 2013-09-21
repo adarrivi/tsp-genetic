@@ -12,7 +12,8 @@ public class TspPanel extends JFrame {
 	private static final TspPanel INSTANCE = new TspPanel();
 
 	private TspProblemProperties problemProperties;
-	private static final int SIZE_OFFSET = 100;
+	private static final int X_OFFSET = 100;
+	private static final int Y_OFFSET = 130;
 
 	public static void main(String[] args) {
 		INSTANCE.run();
@@ -36,8 +37,8 @@ public class TspPanel extends JFrame {
 	private void createPanel() {
 		setTitle("Genetic Tsp");
 		Rectangle dialogPos = new Rectangle(100, 100,
-				problemProperties.getMapSize() + SIZE_OFFSET,
-				problemProperties.getMapSize() + SIZE_OFFSET);
+				problemProperties.getMapSize() + X_OFFSET,
+				problemProperties.getMapSize() + Y_OFFSET);
 
 		setBounds(dialogPos);
 		setLocationRelativeTo(null);

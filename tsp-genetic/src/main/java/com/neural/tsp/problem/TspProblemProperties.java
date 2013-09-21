@@ -1,8 +1,8 @@
 package com.neural.tsp.problem;
 
 public class TspProblemProperties {
-	private static final int DEFAULT_CITIES = 50;
-	private static final int DEFAULT_MAP_SIZE = 250;
+	private static final int DEFAULT_CITIES = 100;
+	private static final int DEFAULT_MAP_SIZE = 350;
 	public static final int DEFAULT_POPULATION_SIZE = 1000;
 	public static final double DEFAULT_MUTATION_PERCENT = 0.1;
 	public static final double DEFAULT_PERCENT_TO_MATE = 0.24;
