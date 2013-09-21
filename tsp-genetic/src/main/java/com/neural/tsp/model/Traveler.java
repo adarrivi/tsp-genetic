@@ -26,7 +26,7 @@ public class Traveler {
 	}
 
 	public void logTravelerInfo() {
-		LOG.debug("Iteration: {}, Patch Length: {}", iteration, distance);
+		LOG.debug("Iteration: {}, Path Length: {}", iteration, distance);
 	}
 
 }
